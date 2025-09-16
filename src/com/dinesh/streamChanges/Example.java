@@ -8,6 +8,7 @@ public class Example {
 
 	public static void main(String[] args) {
 
+		System.out.println("------------------------------------");
 		// Stream.ofNullable construct stream from single element
 		Stream.ofNullable("String").forEach(System.out::println);
 
@@ -45,6 +46,7 @@ public class Example {
 					.collect(Collectors.toList());
 		System.out.println(list);//[2]
 
+		System.out.println("------------------------------------");
 		
 	}
 }

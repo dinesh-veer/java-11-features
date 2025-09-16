@@ -41,6 +41,7 @@ public class Example {
 		// boilerplate:
 		
 		var myList = new ArrayList<Map<String, List<Integer>>>();
+		myList.add(Map.of(key, List.of(2, 3)));
 		for (var current : myList) {
 			// current is inferred to type: Map<String, List<Integer>>
 			System.out.println(current);
