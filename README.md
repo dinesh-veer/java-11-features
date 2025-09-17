@@ -122,3 +122,15 @@ Feel free to fork the repo, add new Java 11 features or examples, and submit pul
 
 ---
 
+
+## 📬 Contact
+
+For questions, feedback, or collaboration:
+
+**Dinesh Veer**
+
+📧 Email: [dveer123@hotmail.com](mailto:dveer123@hotmail.com)
+
+🔗 GitHub: [@dinesh-veer](https://github.com/dinesh-veer)
+
+---
