@@ -1,0 +1,44 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Java 11 Examples | Documentation</title><link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></head><body>
+<header><div class="logo">Java 11 Features</div><nav><a href="index.html">Home</a><a href="features.html">Features</a><a href="jeps.html">JEPs</a><a href="examples.html">Examples</a><a href="installation.html">Installation</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></header>
+<section class="hero"><div class="hero-content"><h1>Java 11 Examples</h1><p>Practical examples showing how to use the most useful Java 11 additions.</p></div></section>
+<section class="content"><h1>Example Catalog</h1><p>The examples below are designed to be small, focused and easy to run. They can be adapted to Maven projects or individual source files.</p></section>
+<section class="content"><h2>1. HTTP Client</h2><pre><code>var client = HttpClient.newBuilder().build();
+var request = HttpRequest.newBuilder()
+        .uri(URI.create("https://example.com"))
+        .GET()
+        .build();
+var response = client.send(request, HttpResponse.BodyHandlers.ofString());
+System.out.println(response.statusCode());</code></pre></section>
+<section class="content"><h2>2. var in Lambda Parameters</h2><pre><code>var values = List.of("java", "11");
+values.stream()
+      .map((var value) -&gt; value.toUpperCase())
+      .forEach(System.out::println);</code></pre><p>This syntax is useful when an annotation must be applied to a lambda parameter.</p></section>
+<section class="content"><h2>3. Single-File Source Launch</h2><pre><code>// Hello.java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello Java 11");
+    }
+}
+
+# Run directly
+java Hello.java</code></pre></section>
+<section class="content"><h2>4. New String APIs</h2><pre><code>System.out.println("   Java 11   ".isBlank());
+System.out.println("a\nb\nc".lines().count());
+System.out.println("Java".repeat(3));
+System.out.println("  Java 11  ".strip());</code></pre></section>
+<section class="content"><h2>5. Files.writeString / readString</h2><pre><code>Path path = Path.of("demo.txt");
+Files.writeString(path, "Hello Java 11");
+String text = Files.readString(path);
+System.out.println(text);</code></pre></section>
+<section class="content"><h2>6. Predicate.not</h2><pre><code>var values = List.of("java", "", "11", "");
+values.stream()
+      .filter(Predicate.not(String::isBlank))
+      .forEach(System.out::println);</code></pre></section>
+<section class="content"><h2>7. Optional.isEmpty</h2><pre><code>Optional&lt;String&gt; value = Optional.empty();
+if (value.isEmpty()) {
+    System.out.println("No value available");
+}</code></pre></section>
+<section class="content"><h2>8. Collection Factory Methods</h2><pre><code>var list = List.of("Java", "11");
+var set = Set.of("Java", "LTS");
+var map = Map.of("version", 11);</code></pre></section>
+<footer></footer><script src="script.js"></script></body></html>
