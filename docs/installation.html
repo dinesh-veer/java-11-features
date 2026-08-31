@@ -1,0 +1,14 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Java 11 Installation | Documentation</title><link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></head><body>
+<header><div class="logo">Java 11 Features</div><nav><a href="index.html">Home</a><a href="features.html">Features</a><a href="jeps.html">JEPs</a><a href="examples.html">Examples</a><a href="installation.html">Installation</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></header>
+<section class="hero"><div class="hero-content"><h1>Java 11 Installation</h1><p>Set up JDK 11 and the Maven environment required to build and run the examples.</p></div></section>
+<section class="content"><h1>Prerequisites</h1><ul><li>JDK 11 installed and available on PATH</li><li>Maven 3.6.x or later</li><li>Git</li><li>Your preferred IDE such as IntelliJ IDEA, Eclipse or VS Code</li></ul></section>
+<section class="content"><h2>Verify Java</h2><pre><code>java -version
+javac -version</code></pre><p>Confirm that both commands report a Java 11 toolchain.</p></section>
+<section class="content"><h2>Build with Maven</h2><pre><code>git clone https://github.com/dinesh-veer/java11-features.git
+cd java11-features
+mvn clean test
+mvn package</code></pre></section>
+<section class="content"><h2>Run a Single-File Example</h2><pre><code>java Hello.java</code></pre></section>
+<section class="content"><h2>IDE Configuration</h2><p>Configure the project SDK and Maven compiler level for Java 11. Make sure your IDE is not silently using a newer JDK for compilation or execution.</p></section>
+<section class="content"><h2>GitHub Pages</h2><p>To publish these static files, configure GitHub Pages to deploy from the repository's <code>/docs</code> folder on the default branch.</p></section>
+<footer></footer><script src="script.js"></script></body></html>
